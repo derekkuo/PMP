@@ -17,7 +17,7 @@
 		<!-- 约定优于配置，约定优于配置 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://127.0.0.1:3306/tarena"></property>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/tarena?useUncode=true&amp;characterEncoding=utf8"></property>
 		<property name="username" value="sa"></property>
 		<property name="password" value="sa123"></property>
 	</bean>
