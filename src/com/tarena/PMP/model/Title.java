@@ -1,6 +1,8 @@
 package com.tarena.PMP.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Title implements Serializable {
 
@@ -10,6 +12,8 @@ public class Title implements Serializable {
 	private String name; //职位名称
 	private String description; //职位描述
 	
+	private Set<Employee> employees = new HashSet<Employee>();
+	
 	public Title() {
 	}
 
@@ -17,6 +21,16 @@ public class Title implements Serializable {
 		super();
 		this.code = code;
 		this.name = name;
+	}
+
+	
+	
+	public Set getEmployees() {
+		return employees;
+	}
+
+	public void setEmployees(Set employees) {
+		this.employees = employees;
 	}
 
 	public Integer getId() {
