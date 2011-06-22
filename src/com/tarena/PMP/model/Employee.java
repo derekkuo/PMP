@@ -33,7 +33,7 @@ public class Employee implements Serializable{
 	private String officePhone; //办公电话
 	private String officeEmail; //办公邮箱
 
-	private Integer titleId; //职位类型
+	private Title title; //职位类型
 	//private Set<Integer> jobEvaluation; //工作评价，可多方位对员工进行评价并备案
 
 	public Employee() {
@@ -45,11 +45,11 @@ public class Employee implements Serializable{
 		this.password = password;
 	}
 
-	public Employee(String loginName, String password, Integer titleId) {
+	public Employee(String loginName, String password, Title title) {
 		super();
 		this.loginName = loginName;
 		this.password = password;
-		this.titleId = titleId;
+		this.title = title;
 	}
 
 	public Integer getId() {
@@ -236,12 +236,12 @@ public class Employee implements Serializable{
 		this.officeEmail = officeEmail;
 	}
 
-	public Integer getTitleId() {
-		return titleId;
+	public Title getTitle() {
+		return title;
 	}
 
-	public void setTitleId(Integer titleId) {
-		this.titleId = titleId;
+	public void setTitle(Title title) {
+		this.title = title;
 	}
 	
 	

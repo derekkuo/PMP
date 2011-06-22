@@ -10,7 +10,7 @@
             <column name="id" />
             <generator class="native" />
         </id>
-        <many-to-one name="titleId" class="com.tarena.PMP.model.Title">
+        <many-to-one name="title" class="com.tarena.PMP.model.Title">
             <column name="title_id" />
         </many-to-one>
         <property name="loginName" type="java.lang.String">
@@ -22,7 +22,7 @@
         <property name="name" type="java.lang.String">
             <column name="name" length="50" />
         </property>
-        <property name="gender" type="java.lang.String">
+        <property name="gender" type="java.lang.Character">
             <column name="gender" length="1" />
         </property>
         <property name="birthday" type="java.util.Date">
