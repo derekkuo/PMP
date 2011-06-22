@@ -18,7 +18,7 @@
 	<mvc:resources mapping="/css/**" location="/css/"/>
 
 	<!-- 扫描所有的controller -->
-	<context:component-scan base-package="com.fsj.spring.web" />
+	<context:component-scan base-package="com.tarena.PMP.web" />
 
 	<!-- InternalResourceViewResolver默认的就是JstlView所以这里就不用配置viewClass了 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -30,7 +30,7 @@
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
         <property name="interceptors">
             <list>
-                <bean class="com.fsj.spring.util.MyHandlerInterceptor"/>
+                <bean class="com.tarena.PMP.util.MyHandlerInterceptor"/>
             </list>
         </property>
 	</bean>
@@ -42,7 +42,7 @@
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 	    <property name="cacheSeconds" value="0" />
 	    <property name="webBindingInitializer">
-	        <bean class="com.fsj.spring.util.MyWebBinding" />
+	        <bean class="com.tarena.PMP.util.MyWebBinding" />
 	    </property>
 	</bean>
 	
