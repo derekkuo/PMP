@@ -1,13 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
-    <title>login</title>
+    <title>My JSP 'welcome.jsp' starting page</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -16,11 +13,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    ${message}
-    <form action="employee/login" method="post">
-    	姓名：<input name="loginName"><br/>
-    	密码：<input type="password" name="password"><br/>
-    	<input type="submit" value="登陆">
-    </form>
+   	欢迎： ${userSessionInfo.name}<br/>
+   <hr/>
+   <a href="<%=request.getContextPath()%>/employee/list">员工管理</a> <br/>
+   <a>职位管理</a> <br/>
   </body>
 </html>
