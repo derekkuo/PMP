@@ -14,11 +14,11 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
 	private IEmployeeDao employeeDao;
 	
-	public IEmployeeDao getiEmployeeDao() {
+	public IEmployeeDao getEmployeeDao() {
 		return employeeDao;
 	}
 
-	public void setiEmployeeDao(IEmployeeDao iEmployeeDao) {
+	public void setEmployeeDao(IEmployeeDao iEmployeeDao) {
 		this.employeeDao = iEmployeeDao;
 	}
 
