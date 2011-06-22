@@ -53,7 +53,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findById(java.lang.Integer)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findById(java.lang.Integer)
 	 */
 	public Employee findById(java.lang.Integer id) {
 		log.debug("getting Employee instance with id: " + id);
@@ -93,7 +93,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByProperty(java.lang.String,
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByProperty(java.lang.String,
 	 * java.lang.Object)
 	 */
 	public List findByProperty(String propertyName, Object value) {
@@ -116,7 +116,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByLoginName(java.lang.Object)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByLoginName(java.lang.Object)
 	 */
 	public List findByLoginName(Object loginName) {
 		return findByProperty(LOGIN_NAME, loginName);
@@ -125,7 +125,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByPassword(java.lang.Object)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByPassword(java.lang.Object)
 	 */
 	public List findByPassword(Object password) {
 		return findByProperty(PASSWORD, password);
@@ -134,7 +134,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByName(java.lang.Object)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByName(java.lang.Object)
 	 */
 	public List findByName(Object name) {
 		return findByProperty(NAME, name);
@@ -143,7 +143,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByGender(java.lang.Object)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByGender(java.lang.Object)
 	 */
 	public List findByGender(Object gender) {
 		return findByProperty(GENDER, gender);
@@ -182,7 +182,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByIdNumber(java.lang.Object)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByIdNumber(java.lang.Object)
 	 */
 	public List findByIdNumber(Object idNumber) {
 		return findByProperty(ID_NUMBER, idNumber);
@@ -211,7 +211,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByQq(java.lang.Object)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByQq(java.lang.Object)
 	 */
 	public List findByQq(Object qq) {
 		return findByProperty(QQ, qq);
@@ -220,7 +220,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByMsn(java.lang.Object)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByMsn(java.lang.Object)
 	 */
 	public List findByMsn(Object msn) {
 		return findByProperty(MSN, msn);
@@ -262,7 +262,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByEmployeeNo(java.lang.Object)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByEmployeeNo(java.lang.Object)
 	 */
 	public List findByEmployeeNo(Object employeeNo) {
 		return findByProperty(EMPLOYEE_NO, employeeNo);
@@ -271,7 +271,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findByHasLeft(java.lang.Object)
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findByHasLeft(java.lang.Object)
 	 */
 	public List findByHasLeft(Object hasLeft) {
 		return findByProperty(HAS_LEFT, hasLeft);
@@ -300,7 +300,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements IEmployeeDao
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.tarena.PMP.model.IEmployeeDao#findAll()
+	 * @see com.tarena.PMP.dao.IEmployeeDao#findAll()
 	 */
 	public List findAll() {
 		log.debug("finding all Employee instances");

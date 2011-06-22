@@ -15,7 +15,7 @@ import com.tarena.PMP.model.Title;
 public class TitleDaoImpl extends HibernateDaoSupport implements ITitleDao{
 	private static final Logger log = LoggerFactory.getLogger(TitleDaoImpl.class);
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#save(com.tarena.PMP.model.Title)
+	 * @see com.tarena.PMP.dao.ITitleDAO#save(com.tarena.PMP.model.Title)
 	 */
 	public void save(Title transientInstance) {
 		log.debug("saving Title instance");
@@ -29,7 +29,7 @@ public class TitleDaoImpl extends HibernateDaoSupport implements ITitleDao{
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#delete(com.tarena.PMP.model.Title)
+	 * @see com.tarena.PMP.dao.ITitleDAO#delete(com.tarena.PMP.model.Title)
 	 */
 	public void delete(Title persistentInstance) {
 		log.debug("deleting Title instance");
@@ -43,7 +43,7 @@ public class TitleDaoImpl extends HibernateDaoSupport implements ITitleDao{
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#findById(java.lang.Integer)
+	 * @see com.tarena.PMP.dao.ITitleDAO#findById(java.lang.Integer)
 	 */
 	public Title findById(java.lang.Integer id) {
 		log.debug("getting Title instance with id: " + id);
@@ -58,7 +58,7 @@ public class TitleDaoImpl extends HibernateDaoSupport implements ITitleDao{
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#findByExample(com.tarena.PMP.model.Title)
+	 * @see com.tarena.PMP.dao.ITitleDAO#findByExample(com.tarena.PMP.model.Title)
 	 */
 	public List findByExample(Title instance) {
 		log.debug("finding Title instance by example");
@@ -77,7 +77,7 @@ public class TitleDaoImpl extends HibernateDaoSupport implements ITitleDao{
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#findByProperty(java.lang.String, java.lang.Object)
+	 * @see com.tarena.PMP.dao.ITitleDAO#findByProperty(java.lang.String, java.lang.Object)
 	 */
 	public List findByProperty(String propertyName, Object value) {
 		log.debug("finding Title instance with property: " + propertyName
@@ -97,28 +97,28 @@ public class TitleDaoImpl extends HibernateDaoSupport implements ITitleDao{
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#findByCode(java.lang.Object)
+	 * @see com.tarena.PMP.dao.ITitleDAO#findByCode(java.lang.Object)
 	 */
 	public List findByCode(Object code) {
 		return findByProperty(CODE, code);
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#findByName(java.lang.Object)
+	 * @see com.tarena.PMP.dao.ITitleDAO#findByName(java.lang.Object)
 	 */
 	public List findByName(Object name) {
 		return findByProperty(NAME, name);
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#findByDescription(java.lang.Object)
+	 * @see com.tarena.PMP.dao.ITitleDAO#findByDescription(java.lang.Object)
 	 */
 	public List findByDescription(Object description) {
 		return findByProperty(DESCRIPTION, description);
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#findAll()
+	 * @see com.tarena.PMP.dao.ITitleDAO#findAll()
 	 */
 	public List findAll() {
 		log.debug("finding all Title instances");
@@ -135,7 +135,7 @@ public class TitleDaoImpl extends HibernateDaoSupport implements ITitleDao{
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#merge(com.tarena.PMP.model.Title)
+	 * @see com.tarena.PMP.dao.ITitleDAO#merge(com.tarena.PMP.model.Title)
 	 */
 	public Title merge(Title detachedInstance) {
 		log.debug("merging Title instance");
@@ -150,7 +150,7 @@ public class TitleDaoImpl extends HibernateDaoSupport implements ITitleDao{
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#attachDirty(com.tarena.PMP.model.Title)
+	 * @see com.tarena.PMP.dao.ITitleDAO#attachDirty(com.tarena.PMP.model.Title)
 	 */
 	public void attachDirty(Title instance) {
 		log.debug("attaching dirty Title instance");
@@ -164,7 +164,7 @@ public class TitleDaoImpl extends HibernateDaoSupport implements ITitleDao{
 	}
 
 	/* (non-Javadoc)
-	 * @see com.tarena.PMP.model.ITitleDAO#attachClean(com.tarena.PMP.model.Title)
+	 * @see com.tarena.PMP.dao.ITitleDAO#attachClean(com.tarena.PMP.model.Title)
 	 */
 	public void attachClean(Title instance) {
 		log.debug("attaching clean Title instance");
