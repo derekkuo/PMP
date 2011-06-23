@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     ${message}
     <form action="employee/login" method="post">
-    	姓名：<input name="loginName"><br/>
+    	账号：<input name="loginName"><br/>
     	密码：<input type="password" name="password"><br/>
     	<input type="submit" value="登陆">
     </form>
