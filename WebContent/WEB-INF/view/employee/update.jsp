@@ -55,6 +55,7 @@
 	   </c:forEach>
    	</select>
 	<input type="submit" value="提交">
+	<a href="javascript:history.back();">取消</a>
    </form>
   </body>
 </html>
