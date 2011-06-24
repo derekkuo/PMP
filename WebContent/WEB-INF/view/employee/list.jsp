@@ -40,13 +40,7 @@
    		<td><fmt:formatDate value="${employee.employmentDate}" pattern="yyyy-MM-dd"/></td>
    		<td>${employee.mobilePhone}</td>
    		<td>${employee.officeEmail}</td>
-   		<td>
-	   		<c:forEach items="${titleList}" var="title">
-	   			<c:if test="${title.id == employee.title.id}">
-			   		${title.name}
-	   			</c:if>
-		   </c:forEach>
-	   	</td>
+   		<td>${employee.title.name}</td>
 	   	<td>
 	   	<a href="<%=request.getContextPath()%>/employee/update/${employee.id}">更新</a>
 	   	<a href="<%=request.getContextPath()%>/employee/delete/${employee.id}">删除</a>
