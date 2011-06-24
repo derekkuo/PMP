@@ -8,6 +8,9 @@ public class Employee implements Serializable{
 	private Integer id;
 	private String loginName;
 	private String password;
+
+	private Title title; //职位类型
+	private Dept dept; //部门
 	
 	private String name;
 	private Character gender; //性别，F女     M男 
@@ -32,9 +35,6 @@ public class Employee implements Serializable{
 	private Date employmentDate; //入职日期
 	private String officePhone; //办公电话
 	private String officeEmail; //办公邮箱
-
-	private Title title; //职位类型
-	//private Set<Integer> jobEvaluation; //工作评价，可多方位对员工进行评价并备案
 
 	public Employee() {
 	}
@@ -242,6 +242,14 @@ public class Employee implements Serializable{
 
 	public void setTitle(Title title) {
 		this.title = title;
+	}
+
+	public Dept getDept() {
+		return dept;
+	}
+
+	public void setDept(Dept dept) {
+		this.dept = dept;
 	}
 	
 	

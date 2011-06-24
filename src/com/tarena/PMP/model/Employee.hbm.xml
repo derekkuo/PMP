@@ -13,6 +13,9 @@
         <many-to-one name="title" class="com.tarena.PMP.model.Title">
             <column name="title_id" />
         </many-to-one>
+        <many-to-one name="dept" class="com.tarena.PMP.model.Dept">
+            <column name="dept_id" />
+        </many-to-one>
         <property name="loginName" type="java.lang.String">
             <column name="login_name" length="50" not-null="true" />
         </property>

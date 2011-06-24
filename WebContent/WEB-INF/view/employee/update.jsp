@@ -23,7 +23,7 @@
    	密码：<input type="password" name="password" value="${employee.password}"><br/>
    	
    	性别：<select name="gender">
-   			<c:if test="${employee.gender == 'M'}">
+   			<c:if test="${employee.gender != 'F'}">
    				<option value="M" selected="selected">男</option>
    				<option value="F">女</option>
    			</c:if>
@@ -31,10 +31,6 @@
    			<option value="M">男</option>
    				<option value="F" selected="selected">女</option>
    			</c:if>
-   	   		<c:if test="${employee.gender == null }">
-   				<option value="M">男</option>
-   				<option value="F">女</option>
-   			</c:if>   			
    		</select><br/>
 
 	入职日期：
@@ -43,7 +39,7 @@
    	手机：<input name="mobilePhone" value="${employee.mobilePhone}"><br/>
    	公司邮箱：<input name="officeEmail" value="${employee.officeEmail}"><br/>
 
-   	部门：
+   	职位：
    <select name="title.id">
    		<c:forEach items="${titleList}" var="title">
    			<c:if test="${title.id == employee.title.id}">
