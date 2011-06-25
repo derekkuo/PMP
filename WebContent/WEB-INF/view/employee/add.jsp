@@ -29,7 +29,12 @@
    	入职日期：<input class="Wdate" name="employmentDate" onClick="WdatePicker()"><br/>
    	手机：<input name="mobilePhone"><br/>
    	公司邮箱：<input name="officeEmail"><br/>
-   	
+
+   	部门：<select name="dept.id">
+	   		<c:forEach items="${deptList}" var="dept">
+		   		<option value="${dept.id}">${dept.name}</option>
+		   </c:forEach>
+	   	</select>   	
    	职位：<select name="title.id">
 	   		<c:forEach items="${titleList}" var="title">
 		   		<option value="${title.id}">${title.name}</option>
