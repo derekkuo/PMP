@@ -38,7 +38,17 @@
    	
    	手机：<input name="mobilePhone" value="${employee.mobilePhone}"><br/>
    	公司邮箱：<input name="officeEmail" value="${employee.officeEmail}"><br/>
-
+   	部门：
+   <select name="dept.id">
+   		<c:forEach items="${deptList}" var="dept">
+   			<c:if test="${dept.id == employee.dept.id}">
+		   		<option value="${dept.id}" selected="selected">${dept.name}</option>
+   			</c:if>
+   			<c:if test="${dept.id != employee.dept.id}">
+		   		<option value="${dept.id}">${dept.name}</option>
+   			</c:if>
+	   </c:forEach>
+   	</select>
    	职位：
    <select name="title.id">
    		<c:forEach items="${titleList}" var="title">

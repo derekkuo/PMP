@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50018
 File Encoding         : 65001
 
-Date: 2011-06-24 10:48:52
+Date: 2011-06-25 15:22:49
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -47,17 +47,18 @@ CREATE TABLE `employee` (
   `dept_id` int(20) default NULL,
   PRIMARY KEY  (`id`),
   KEY `FK_TITLE_ID` (`title_id`),
-  CONSTRAINT `FK_TITLE_ID` FOREIGN KEY (`title_id`) REFERENCES `title` (`id`),
   KEY `FK_DEPT_ID` (`dept_id`),
-  CONSTRAINT `FK_DEPT_ID` FOREIGN KEY (`dept_id`) REFERENCES `dept` (`id`)
+  CONSTRAINT `FK_DEPT_ID` FOREIGN KEY (`dept_id`) REFERENCES `dept` (`id`),
+  CONSTRAINT `FK_TITLE_ID` FOREIGN KEY (`title_id`) REFERENCES `title` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of employee
 -- ----------------------------
-INSERT INTO `employee` VALUES ('1', 'jiangzerui', 'jiangzerui', '蒋泽瑞', 'M', null, null, null, null, null, '', null, null, null, null, null, null, null, null, null, null, null, 'jiangzr@tarena.com.cn', '4', '1');
+INSERT INTO `employee` VALUES ('1', 'jiangzerui', 'jiangzerui', '蒋泽瑞', 'M', null, null, null, null, null, '', null, null, null, null, null, null, null, null, null, null, null, 'jiangzr@tarena.com.cn', '4', '2');
 INSERT INTO `employee` VALUES ('3', 'guodaxi', 'guodaxi', '郭大喜', 'M', null, null, null, null, null, '13911607119', null, null, null, null, null, null, null, null, null, '2006-10-23', null, 'guodx@tarena.com.cn', '3', '1');
 INSERT INTO `employee` VALUES ('5', 'yuechengyang', 'yuechengyang', '岳城阳', 'M', null, null, null, null, null, '', null, null, null, null, null, null, null, null, null, '2011-06-23', null, '', '1', '1');
 INSERT INTO `employee` VALUES ('7', 'zhangyue', 'zhangyue', '张月', 'F', null, null, null, null, null, '', null, null, null, null, null, null, null, null, null, null, null, '', '1', '1');
 INSERT INTO `employee` VALUES ('9', 'dongzheng', 'dongzheng', '董正', 'M', null, null, null, null, null, '139', null, null, null, null, null, null, null, null, null, null, null, 'dongzheng@tarena.com.cn', '1', '1');
 INSERT INTO `employee` VALUES ('22', 'huzijiang', 'huzijiang', '胡秭江', 'M', null, null, null, null, null, '139', null, null, null, null, null, null, null, null, null, '2012-01-04', null, 'huzj@tarena.com.cn', '1', '1');
+INSERT INTO `employee` VALUES ('23', 't', 't', 't', 'M', null, null, null, null, null, 't', null, null, null, null, null, null, null, null, null, null, null, 'test2', '1', '1');

@@ -41,6 +41,7 @@
    		<td>${employee.mobilePhone}</td>
    		<td>${employee.officeEmail}</td>
    		<td>${employee.title.name}</td>
+   		<td>${employee.dept.name}</td>
 	   	<td>
 	   	<a href="<%=request.getContextPath()%>/employee/update/${employee.id}">更新</a>
 	   	<a href="<%=request.getContextPath()%>/employee/delete/${employee.id}">删除</a>

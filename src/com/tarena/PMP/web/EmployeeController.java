@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.fsj.spring.util.Constants;
+import com.tarena.PMP.util.Constants;
+import com.tarena.PMP.model.Dept;
 import com.tarena.PMP.model.Employee;
 import com.tarena.PMP.model.Title;
+import com.tarena.PMP.service.IDeptService;
 import com.tarena.PMP.service.IEmployeeService;
 import com.tarena.PMP.service.ITitleService;
 
@@ -22,6 +24,7 @@ import com.tarena.PMP.service.ITitleService;
 public class EmployeeController {
 	private IEmployeeService employeeService;
 	private ITitleService titleService;
+	private IDeptService deptService;
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(String loginName, String password, Model model, HttpServletRequest request) throws Exception{
@@ -43,8 +46,6 @@ public class EmployeeController {
 	public String list(Model model, HttpServletRequest request) throws Exception {
 		List<Employee> employeeList = employeeService.getEmployeeList();
 		model.addAttribute("employeeList", employeeList);
-		List<Title> titleList = titleService.getTitleList();
-		model.addAttribute("titleList", titleList);
 		if(StringUtils.isNotBlank(request.getParameter("resMess")) && StringUtils.isNotBlank(request.getParameter("opeMess"))) {
 			model.addAttribute("message",
 					setOperateMessage( request.getParameter("resMess"),request.getParameter("opeMess"),"用户") 
@@ -81,6 +82,8 @@ public class EmployeeController {
 	public String toAdd( Model model ) throws Exception{
 		List<Title> titleList = titleService.getTitleList();
 		model.addAttribute("titleList", titleList);
+		List<Dept> deptList = deptService.getDeptList();
+		model.addAttribute("deptList", deptList);
 		return "employee/add";
 	}
 
@@ -113,6 +116,7 @@ public class EmployeeController {
 	public String toUpdate( @PathVariable("id") int id, Model model ) throws Exception{
 		model.addAttribute("employee", employeeService.getEmployeeById(id));
 		model.addAttribute("titleList", titleService.getTitleList());
+		model.addAttribute("deptList", deptService.getDeptList());
 		return "employee/update";
 	}
 	@RequestMapping(value="/update/{id}", method=RequestMethod.POST)
@@ -161,6 +165,14 @@ public class EmployeeController {
 	}
 	public void setTitleService(ITitleService titleService) {
 		this.titleService = titleService;
+	}
+
+	public IDeptService getDeptService() {
+		return deptService;
+	}
+
+	public void setDeptService(IDeptService deptService) {
+		this.deptService = deptService;
 	}
 	
 	

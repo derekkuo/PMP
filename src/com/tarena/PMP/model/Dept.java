@@ -1,12 +1,13 @@
 package com.tarena.PMP.model;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 /*
  * 模型 部门
  */
-public class Dept {
+public class Dept implements Serializable{
 	 private Integer id;
 	 private String code; //部门编号
 	 private String name; //部门名

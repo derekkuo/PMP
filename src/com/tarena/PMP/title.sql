@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50018
 File Encoding         : 65001
 
-Date: 2011-06-24 11:14:00
+Date: 2011-06-25 15:23:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,6 +31,8 @@ CREATE TABLE `title` (
 -- Records of title
 -- ----------------------------
 INSERT INTO `title` VALUES ('1', 'xmjl', '项目经理', null);
-INSERT INTO `title` VALUES ('2', 'zz', '项目部组长', '');
-INSERT INTO `title` VALUES ('3', 'fzr', '项目部负责人', null);
-INSERT INTO `title` VALUES ('4', 'zj', '质量保障主管', null);
+INSERT INTO `title` VALUES ('2', 'zj', '助教', null);
+INSERT INTO `title` VALUES ('3', 'zz', '组长', null);
+INSERT INTO `title` VALUES ('4', 'fzr', '负责人', null);
+INSERT INTO `title` VALUES ('5', 'zj', '质量保障主管', null);
+
