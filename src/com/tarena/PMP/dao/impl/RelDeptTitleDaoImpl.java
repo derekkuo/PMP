@@ -198,7 +198,6 @@ public class RelDeptTitleDaoImpl extends HibernateDaoSupport implements IRelDept
 					"where rdt.dept.id=" + deptId +
 					" and rdt.title.id=title.id" +
 					" order by title.turn desc";
-			System.out.println(queryString);
 			return getHibernateTemplate().find(queryString);
 		} catch (RuntimeException re) {
 			log.error("find title by deptid failed", re);

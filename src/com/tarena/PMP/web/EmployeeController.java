@@ -111,8 +111,6 @@ public class EmployeeController {
 	@RequestMapping(value="/update/{id}", method=RequestMethod.GET)
 	public String toUpdate( @PathVariable("id") int id, Model model ) throws Exception{
 		model.addAttribute("employee", employeeService.getEmployeeById(id));
-		model.addAttribute("titleList", titleService.getTitleList());
-		model.addAttribute("deptList", deptService.getDeptList());
 		return "employee/update";
 	}
 	@RequestMapping(value="/update/{id}", method=RequestMethod.POST)
