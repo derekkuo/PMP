@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "employees"})  
 public class Title implements Serializable {
 
 	private Integer id;
@@ -11,6 +14,7 @@ public class Title implements Serializable {
 	private String code; //职位编码
 	private String name; //职位名称
 	private String description; //职位描述
+	private Integer turn;
 	
 	private Set<Employee> employees = new HashSet<Employee>();
 	
@@ -21,16 +25,6 @@ public class Title implements Serializable {
 		super();
 		this.code = code;
 		this.name = name;
-	}
-
-	
-	
-	public Set getEmployees() {
-		return employees;
-	}
-
-	public void setEmployees(Set employees) {
-		this.employees = employees;
 	}
 
 	public Integer getId() {
@@ -63,6 +57,23 @@ public class Title implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	
+	public Set<Employee> getEmployees() {
+		return employees;
+	}
+
+	public void setEmployees(Set<Employee> employees) {
+		this.employees = employees;
+	}
+
+	public Integer getTurn() {
+		return turn;
+	}
+
+	public void setTurn(Integer turn) {
+		this.turn = turn;
 	}
 	
 	

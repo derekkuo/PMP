@@ -16,6 +16,9 @@
         <property name="name" type="java.lang.String">
             <column name="name" length="50" not-null="true" />
         </property>
+        <property name="turn" type="java.lang.Integer">
+            <column name="turn" length="20" not-null="true" />
+        </property>
         <property name="description" type="java.lang.String">
             <column name="description" length="50" />
         </property>

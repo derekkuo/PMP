@@ -4,9 +4,12 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 /*
  * 模型 部门
  */
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "employees"})
 public class Dept implements Serializable{
 	 private Integer id;
 	 private String code; //部门编号
