@@ -23,6 +23,7 @@ CREATE TABLE `title` (
   `id` int(20) NOT NULL auto_increment,
   `code` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
+  `turn` int(20) NOT NULL,
   `description` varchar(50) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -30,9 +31,9 @@ CREATE TABLE `title` (
 -- ----------------------------
 -- Records of title
 -- ----------------------------
-INSERT INTO `title` VALUES ('1', 'xmjl', '项目经理', null);
-INSERT INTO `title` VALUES ('2', 'zj', '助教', null);
-INSERT INTO `title` VALUES ('3', 'zz', '组长', null);
-INSERT INTO `title` VALUES ('4', 'fzr', '负责人', null);
-INSERT INTO `title` VALUES ('5', 'zj', '质量保障主管', null);
+INSERT INTO `title` VALUES ('1', 'xmjl', '项目经理', 31, null);
+INSERT INTO `title` VALUES ('2', 'zj', '助教', 30, null);
+INSERT INTO `title` VALUES ('3', 'zz', '组长', 20, null);
+INSERT INTO `title` VALUES ('4', 'fzr', '负责人', 10, null);
+INSERT INTO `title` VALUES ('5', 'zj', '质量保障主管', 5, null);
 

@@ -80,10 +80,6 @@ public class EmployeeController {
 	 */
 	@RequestMapping(value="add", method=RequestMethod.GET)
 	public String toAdd( Model model ) throws Exception{
-		List<Title> titleList = titleService.getTitleList();
-		model.addAttribute("titleList", titleList);
-		List<Dept> deptList = deptService.getDeptList();
-		model.addAttribute("deptList", deptList);
 		return "employee/add";
 	}
 
