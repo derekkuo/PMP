@@ -5,6 +5,7 @@
 <html>
   <head>
     <title>My JSP 'welcome.jsp' starting page</title>
+    <%@include file="/common.jsp"%>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    

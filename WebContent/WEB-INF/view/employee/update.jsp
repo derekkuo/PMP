@@ -6,6 +6,7 @@
 <html>
   <head>
     <title>增加员工</title>
+	<%@include file="/common.jsp"%>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -39,26 +40,12 @@
    	手机：<input name="mobilePhone" value="${employee.mobilePhone}"><br/>
    	公司邮箱：<input name="officeEmail" value="${employee.officeEmail}"><br/>
    	部门：
-   <select name="dept.id">
-   		<c:forEach items="${deptList}" var="dept">
-   			<c:if test="${dept.id == employee.dept.id}">
-		   		<option value="${dept.id}" selected="selected">${dept.name}</option>
-   			</c:if>
-   			<c:if test="${dept.id != employee.dept.id}">
-		   		<option value="${dept.id}">${dept.name}</option>
-   			</c:if>
-	   </c:forEach>
+   	<select name="dept.id" class="hasValueDeptSelect">
+   		<option value="${employee.dept.id}" selected="selected">${employee.dept.id}</option>
    	</select>
    	职位：
-   <select name="title.id">
-   		<c:forEach items="${titleList}" var="title">
-   			<c:if test="${title.id == employee.title.id}">
-		   		<option value="${title.id}" selected="selected">${title.name}</option>
-   			</c:if>
-   			<c:if test="${title.id != employee.title.id}">
-		   		<option value="${title.id}">${title.name}</option>
-   			</c:if>
-	   </c:forEach>
+   	<select name="title.id" class="hasValueTitleSelect">
+   		<option value="${employee.title.id}" selected="selected">${employee.title.id}</option>   	
    	</select>
 	<input type="submit" value="提交">
 	<a href="javascript:history.back();">取消</a>

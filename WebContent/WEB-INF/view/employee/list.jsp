@@ -6,6 +6,7 @@
 <html>
   <head>
     <title>员工列表</title>
+    <%@include file="/common-table.jsp"%>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -15,13 +16,13 @@
   
   <body>
   <a href="<%=request.getContextPath()%>/employee/add">增加</a>
-  <br/>${message }
-  <hr/>
-  <table>
+  <br/>${message}
+
+  <table id="mytable">
    <thead><tr>
    		<th>登录名</th><th>姓名</th><th>性别</th>
    		<th>入职日期</th><th>手机</th><th>公司邮箱</th>
-   		<th>职位</th>
+   		<th>部门</th><th>职位</th>
    		<th>操作</th>
    </tr></thead>
    <tbody>
@@ -40,8 +41,8 @@
    		<td><fmt:formatDate value="${employee.employmentDate}" pattern="yyyy-MM-dd"/></td>
    		<td>${employee.mobilePhone}</td>
    		<td>${employee.officeEmail}</td>
-   		<td>${employee.title.name}</td>
    		<td>${employee.dept.name}</td>
+   		<td>${employee.title.name}</td>
 	   	<td>
 	   	<a href="<%=request.getContextPath()%>/employee/update/${employee.id}">更新</a>
 	   	<a href="<%=request.getContextPath()%>/employee/delete/${employee.id}">删除</a>

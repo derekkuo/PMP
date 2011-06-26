@@ -5,7 +5,7 @@
 <html>
   <head>
     <title>增加员工</title>
-    
+    <%@include file="/common.jsp"%>    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -29,17 +29,8 @@
    	入职日期：<input class="Wdate" name="employmentDate" onClick="WdatePicker()"><br/>
    	手机：<input name="mobilePhone"><br/>
    	公司邮箱：<input name="officeEmail"><br/>
-
-   	部门：<select name="dept.id">
-	   		<c:forEach items="${deptList}" var="dept">
-		   		<option value="${dept.id}">${dept.name}</option>
-		   </c:forEach>
-	   	</select>   	
-   	职位：<select name="title.id">
-	   		<c:forEach items="${titleList}" var="title">
-		   		<option value="${title.id}">${title.name}</option>
-		   </c:forEach>
-	   	</select>
+	部门：<select name="dept.id" class="deptSelect"></select>
+	职位：<select name="title.id" class="titleSelect"></select>
 	  <input type="submit" value="提交">
 	  <a href="javascript:history.back();">取消</a>
    </form>
