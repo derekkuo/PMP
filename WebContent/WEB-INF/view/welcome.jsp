@@ -4,6 +4,6 @@
 <TITLE>Welcome</TITLE>
 </HEAD>
 <BODY>
-	<img width="350" src="<%=request.getContextPath()%>/img/home.jpg">
+
 </BODY>
 </HTML>

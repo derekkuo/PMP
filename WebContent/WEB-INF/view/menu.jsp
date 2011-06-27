@@ -14,19 +14,16 @@
 	<meta http-equiv="description" content="This is my page">
   </head>
   
-  <body>
-  <div style="padding:5 5 100 5; margin:0 0 10 5;border:2px solid #ddddff;">
-	<a href="<%=request.getContextPath()%>/home/welcome">首页</a>
-	<br/>
-
+  <body style="background-color: #ddddff">
+  <div style="padding:5 5 100 5; margin:5 3 10 5;border:2px solid #ddddff; background-color: #ffffff;">
    	员工管理
-	<ul>
+	<ul class="box">
 		<li><a href="<%=request.getContextPath()%>/employee/list">显示所有员工</a></li>
 		<li><a href="<%=request.getContextPath()%>/employee/add">增加员工</a></li>
 	</ul>
 	<br/>
    	职位管理
-	<ul>
+	<ul class="box">
 		<li>显示所有职位</li>
 		<li>增加职位</li>
 	</ul>

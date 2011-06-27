@@ -4,9 +4,9 @@
 <TITLE>PMP</TITLE>
 </HEAD>
 
-<FRAMESET rows="7%,*"  frameborder="no" border="0" framespacing="0">
+<FRAMESET rows="9%,*"  frameborder="no" border="0" framespacing="0">
   <FRAME src="<%=request.getContextPath()%>/home/top" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
-  <FRAMESET   cols="12%,*" framespacing="0" frameborder="no" border="0">
+  <FRAMESET   cols="19%,*" framespacing="0" frameborder="no" border="0">
     <FRAME src="<%=request.getContextPath()%>/home/menu" name="leftFrame" scrolling="No" noresize="noresize"  />
     <FRAME src="<%=request.getContextPath()%>/home/welcome" name="rightFrame"  />
   </FRAMESET>

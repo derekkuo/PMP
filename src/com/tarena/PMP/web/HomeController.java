@@ -10,12 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 	@RequestMapping("/home")
-	public String home( Model model ) throws Exception{
-		model.addAttribute("message", "PMP");
+	public String home() throws Exception{
 		return "login";
 	}
 	@RequestMapping("/home/{nav}")
-	public String home( @PathVariable String nav, Model model ) throws Exception{
+	public String home( @PathVariable String nav ) throws Exception{
 		return nav;
 	}
 }

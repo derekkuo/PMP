@@ -12,7 +12,9 @@
   </head>
   
   <body>
-  	<span style="margin-left:10px; font-size:20px;">项目经理综合管理系统</span>
-  	<span style="margin-left:20px;">欢迎： ${userSessionInfo.name}</span>
+  	<div style="margin-top:5px;">
+	  	<span style="margin-left:10px; font-size:20px;">项目经理综合管理系统</span>
+	  	<span style="margin-left:20px;">欢迎： ${userSessionInfo.name}</span>
+  	</div>
   </body>
 </html>

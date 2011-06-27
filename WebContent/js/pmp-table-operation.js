@@ -1,6 +1,6 @@
 	$(function(){
 		$("#mytable").tablesorter( {sortList: []} );
-		senfe("mytable","#ffffff","#f8fbfc","#ecfbd4","#e5f1f4");
+		senfe("mytable","#ffffff","#f8fbfc","#e5f1f4","#F7F6A3");
 	});
 
 	function senfe(o,a,b,c,d){

@@ -18,7 +18,7 @@
   <div style="margin-left: 5px;">
   <table id="mytable">
    <thead><tr>
-   		<th>登录名</th><th>姓名</th><th>性别</th>
+   		<th>姓名</th><th>性别</th>
    		<th>入职日期</th><th>手机</th><th>公司邮箱</th>
    		<th>部门</th><th>职位</th>
    		<th>操作</th>
@@ -26,7 +26,6 @@
    <tbody>
    <c:forEach items="${employeeList}" var="employee">
    	<tr>
-   		<td>${employee.loginName}</td>
    		<td>${employee.name}</td>
    		<td>
    			<c:choose>
