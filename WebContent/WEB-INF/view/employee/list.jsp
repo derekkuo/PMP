@@ -15,9 +15,7 @@
   </head>
   
   <body>
-  <a href="<%=request.getContextPath()%>/employee/add">增加</a>
-  <br/>${message}
-
+  <div style="margin-left: 5px;">
   <table id="mytable">
    <thead><tr>
    		<th>登录名</th><th>姓名</th><th>性别</th>
@@ -51,5 +49,7 @@
    </c:forEach>
    </tbody>
    </table>
+   <br/><br/><div align="center">${message}</div>
   </body>
+  </div>
 </html>

@@ -26,6 +26,17 @@ public class EmployeeController {
 	private ITitleService titleService;
 	private IDeptService deptService;
 	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String toLogin( HttpServletRequest request, Model model) throws Exception{
+		if(request.getSession().getAttribute( Constants.USER_INFO_SESSION ) != null){
+			return "home"; //如果已经登陆，显示登陆后的界面
+		}
+		else{
+			return "redirect:/home"; //如果没有登陆信息，导向至登录界面
+		}
+	}
+	
+	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(String loginName, String password, Model model, HttpServletRequest request) throws Exception{
 		Employee employee = employeeService.getEmployeeByLoginName(loginName);
@@ -38,7 +49,7 @@ public class EmployeeController {
 			return "login";
 		}else {
 			request.getSession().setAttribute(Constants.USER_INFO_SESSION, employee);
-			return "menu";
+			return "home";
 		}
 	}
 	

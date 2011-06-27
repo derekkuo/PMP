@@ -16,7 +16,7 @@
   </head>
   
   <body>
-  
+  <div style="margin-left:5px;">
    <form action="<%=request.getContextPath()%>/employee/add" method="post">
    	登录名：<input name="loginName"><br/>
    	密码：<input type="password" name="password"><br/>
@@ -34,5 +34,6 @@
 	  <input type="submit" value="提交">
 	  <a href="javascript:history.back();">取消</a>
    </form>
+   </div>
   </body>
 </html>

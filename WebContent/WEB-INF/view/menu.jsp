@@ -6,6 +6,7 @@
   <head>
     <title>My JSP 'welcome.jsp' starting page</title>
     <%@include file="/common.jsp"%>
+    <script type="text/javascript" src="js/pmp-menu.js"></script>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -14,9 +15,22 @@
   </head>
   
   <body>
-   	欢迎： ${userSessionInfo.name}<br/>
-   <hr/>
-   <a href="<%=request.getContextPath()%>/employee/list">员工管理</a> <br/>
-   <a>职位管理</a> <br/>
-  </body>
+  <div style="padding:5 5 100 5; margin:0 0 10 5;border:2px solid #ddddff;">
+	<a href="<%=request.getContextPath()%>/home/welcome">首页</a>
+	<br/>
+
+   	员工管理
+	<ul>
+		<li><a href="<%=request.getContextPath()%>/employee/list">显示所有员工</a></li>
+		<li><a href="<%=request.getContextPath()%>/employee/add">增加员工</a></li>
+	</ul>
+	<br/>
+   	职位管理
+	<ul>
+		<li>显示所有职位</li>
+		<li>增加职位</li>
+	</ul>
+	</div>
+	</body>
+
 </html>

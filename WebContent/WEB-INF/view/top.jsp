@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>login</title>
+    <title>top</title>
     <%@include file="/common.jsp"%>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -12,15 +12,7 @@
   </head>
   
   <body>
-  	<div align="center" style="margin-top:50px;">
-    <span style="margin-bottom:50px; margin-left:10px; font-size:20px;">项目经理综合管理系统</span>
-    
-    <form action="employee/login" method="post">
-    	账号：<input name="loginName"><br/>
-    	密码：<input type="password" name="password"><br/>
-    	<input type="submit" value="登陆">
-    </form>
-    ${message}
-    </div>
+  	<span style="margin-left:10px; font-size:20px;">项目经理综合管理系统</span>
+  	<span style="margin-left:20px;">欢迎： ${userSessionInfo.name}</span>
   </body>
 </html>

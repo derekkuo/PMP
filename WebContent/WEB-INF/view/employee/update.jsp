@@ -16,7 +16,7 @@
   </head>
   
   <body>
-  
+   <div style="margin-left:5px;">
    <form action="<%=request.getContextPath()%>/employee/update/${employee.id}" method="post">
    <input type="hidden" name="id" value="${employee.id}">
    	登录名：<input name="loginName" value="${employee.loginName}"><br/>
@@ -50,5 +50,6 @@
 	<input type="submit" value="提交">
 	<a href="javascript:history.back();">取消</a>
    </form>
+  </div>
   </body>
 </html>
