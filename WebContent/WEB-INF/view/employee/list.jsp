@@ -41,14 +41,14 @@
    		<td>${employee.dept.name}</td>
    		<td>${employee.title.name}</td>
 	   	<td>
-	   	<a href="<%=request.getContextPath()%>/employee/update/${employee.id}">更新</a>
-	   	<a href="<%=request.getContextPath()%>/employee/delete/${employee.id}">删除</a>
+	   	<input type="button" value="更新" onclick="location='<%=request.getContextPath()%>/employee/update/${employee.id}'" style="height:30px;width:45px;">
+	   	<input type="button" value="删除" onclick="location='<%=request.getContextPath()%>/employee/delete/${employee.id}'" style="height:30px;width:45px;">
 	   	</td>
    	</tr>
    </c:forEach>
    </tbody>
    </table>
-   <br/><br/><div align="center">${message}</div>
   </body>
   </div>
+  <div class="operate-result-message" align="center" style="padding:0 0 0 0; margin:10 0 5 400; width: 200px;font-size: 20px;">${message}</div>
 </html>

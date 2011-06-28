@@ -8,6 +8,8 @@
 %>
 	<base href="<%=basePath%>">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
-	<script type="text/javascript" src="js/pmp-depttitle-select-change.js"></script>
+	<link href="<%=request.getContextPath()%>/css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/js/pmp-operate-result-message.js"></script>
+	

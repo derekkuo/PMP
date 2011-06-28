@@ -25,7 +25,7 @@
 		<property name="dataSource" ref="dataSource"/>
        <property name="mappingDirectoryLocations">
          <list><!-- 这里直接映射的pojo类所在的包，简单方便不用没次加一个pojo类都需要到这里来添加 -->
-            <value>classpath:com/tarena/PMP/model</value>
+            <value>classpath:com/tarena/pmp/*/model</value>
          </list>
        </property>
 		<property name="hibernateProperties">
@@ -40,9 +40,9 @@
 		</property>
 	</bean>
 	
-	<!-- 自动扫描组件，这里要把web下面的 controller去除，他们是在spring3-servlet.xml中配置的，如果不去除会影响事务管理的。-->
-	<context:component-scan base-package="com.tarena.PMP">
-		<context:exclude-filter type="regex" expression="com.tarena.PMP.web.*"/>
+	<!-- 自动扫描组件，这里要把controler下面的 controller去除，他们是在spring3-servlet.xml中配置的，如果不去除会影响事务管理的。-->
+	<context:component-scan base-package="com.tarena.pmp">
+		<context:exclude-filter type="regex" expression="com.tarena.pmp.*.controler"/>
 	</context:component-scan>
 	
 	<!-- 配置Hibernate的延迟加载，OpenSessionInView -->
@@ -58,7 +58,7 @@
 	</bean>
 
 	<aop:config>
-		<aop:advisor pointcut="execution(* com.tarena.PMP.service.*Service.*(..))" advice-ref="txAdvice"/>
+		<aop:advisor pointcut="execution(* com.tarena.pmp.*.service.*Service.*(..))" advice-ref="txAdvice"/>
 	</aop:config>
 
 	<tx:advice id="txAdvice" transaction-manager="txManager">
